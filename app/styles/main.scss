@@ -21,12 +21,15 @@
   padding : 0.6em;
 }
 
-
+h1, h2, h3, h4 {
+  color : #333333;
+}
 
 body {
   padding: 0;
   border-radius : 0;
   font-family: 'Lato', sans-serif;
+  background :#EEEEEE;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -96,7 +99,7 @@ body {
 .card{
   width: 350px;
   border: 1px solid #ccc;
-  box-shadow: 1px 1px 3px #888;
+  box-shadow: 4px 3px 1px #bbb;
   min-height: 250px;
   padding: 10px;
   margin: 10px;
