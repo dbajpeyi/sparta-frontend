@@ -1,6 +1,7 @@
-<div class="list-group">
-  <a href="#" class="list-group-item" ng-repeat="article in articles">
-    <h4 class="list-group-item-heading">{{article.title}}</h4>
-    <p class="list-group-item-text">{{article.content}}</p>
-  </a>
+
+<div id="mainbox">
+	<div class="card" ng-repeat="article in articles">
+	  <h2>{{article.title}}</h2>
+	  <p>{{article.content}}</p>
+	</div>
 </div>

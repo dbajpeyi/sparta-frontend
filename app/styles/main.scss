@@ -9,11 +9,16 @@
 }
 
 .navbar, .btn{
-  border-radius : 0;
+  border-radius : 0 ;
+}
+
+*{
+  border-radius : 0 !important;
 }
 
 body {
   padding: 0;
+  border-radius : 0;
   font-family: 'Lato', sans-serif;
 }
 
@@ -38,6 +43,7 @@ body {
     padding-bottom: 19px;
   }
 }
+
 
 /* Custom page footer */
 .footer {
@@ -70,10 +76,37 @@ body {
   }
 }
 
+
+.card{
+width: 350px;
+border: 1px solid gray;
+box-shadow: 1px 1px 3px #888;
+min-height: 250px;
+padding: 10px;
+margin: 10px;
+}
+
+#mainbox{
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+flex-wrap: wrap;
+}
+
+@media screen and (max-width : 768px){
+  .card{
+  width : 350px;
+  }
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
     max-width: 730px;
+  }
+
+  .card{
+    width: 450px;
   }
 
   /* Remove the padding we set earlier */
