@@ -1,2 +1,6 @@
-<p>This is the articles view.</p>
-{{test}}
+<div class="list-group">
+  <a href="#" class="list-group-item" ng-repeat="article in articles">
+    <h4 class="list-group-item-heading">{{article.title}}</h4>
+    <p class="list-group-item-text">{{article.content}}</p>
+  </a>
+</div>
