@@ -10,6 +10,6 @@
 angular.module('spartaFrontendApp')
   .controller('ArticlesCtrl', function ($scope, Articles) {
   	Articles.get({}, function(data){
-  		$scope.articles = data;
+  		$scope.articles = [data[0],data[0],data[0]];
   	});
   });

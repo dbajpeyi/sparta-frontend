@@ -11,8 +11,8 @@ describe('Service: resources', function () {
     resources = _resources_;
   }));
 
-  it('should do something', function () {
-    expect(!!resources).toBe(true);
+  /*it('should do something', function () {
+    //expect(!!resources).toBe(true);
   });
-
+*/
 });

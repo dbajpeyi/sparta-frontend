@@ -1,7 +1,7 @@
 
 <div id="mainbox">
-	<div class="card" ng-repeat="article in articles">
-	  <h2>{{article.title}}</h2>
+	<div class="card" ng-repeat="article in articles track by $index">
+	  <h3>{{article.title}}</h3>
 	  <p>{{article.content}}</p>
 	</div>
 </div>
