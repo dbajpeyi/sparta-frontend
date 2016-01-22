@@ -28,4 +28,7 @@ angular
       .otherwise({
         redirectTo: '/articles'
       });
+  })
+  .config(function ($httpProvider) {
+      $httpProvider.defaults.withCredentials = false;
   });
