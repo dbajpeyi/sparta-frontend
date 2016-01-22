@@ -8,10 +8,8 @@
  * Controller of the spartaFrontendApp
  */
 angular.module('spartaFrontendApp')
-  .controller('ArticlesCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ArticlesCtrl', function ($scope, Articles) {
+  	Articles.get({}, function(data){
+  		$scope.data = data;
+  	});
   });
