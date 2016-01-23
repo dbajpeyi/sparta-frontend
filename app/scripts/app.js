@@ -16,9 +16,15 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'resources.all'
+    'resources.all',
+    'satelizer'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $authProvider) {
+
+    $authProvider.baseUrl = 'http://localhost:8000';
+    $authProvider.loginUrl = '/api-token-auth';
+    $authProvider.sgnupUrl = '/signup';
+
     $routeProvider
       .when('/articles', {
         templateUrl: 'views/articles.html',

@@ -105,6 +105,10 @@ body {
   margin: 10px;
 }
 
+.panel{
+  box-shadow: 4px 3px 1px #bbb;
+}
+
 #mainbox{
   box-sizing: border-box;
   justify-content: center;
@@ -118,6 +122,10 @@ flex-wrap: wrap;
   }
 }
 
+.orange{
+  background-color : orange;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
@@ -125,7 +133,7 @@ flex-wrap: wrap;
   }
 
   .card{
-    width: 30%;
+    width: 700px;
   }
 
   /* Remove the padding we set earlier */
