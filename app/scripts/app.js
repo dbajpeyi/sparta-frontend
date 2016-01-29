@@ -17,7 +17,7 @@ angular
     'ngSanitize',
     'ngTouch',
     'resources.all',
-    'satelizer'
+    'satellizer'
   ])
   .config(function ($routeProvider, $authProvider) {
 
@@ -30,6 +30,11 @@ angular
         templateUrl: 'views/articles.html',
         controller: 'ArticlesCtrl',
         controllerAs: 'articles'
+      })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl',
+        controllerAs: 'signup'
       })
       .otherwise({
         redirectTo: '/articles'
