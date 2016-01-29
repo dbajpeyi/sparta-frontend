@@ -8,8 +8,17 @@
  * Controller of the spartaFrontendApp
  */
 angular.module('spartaFrontendApp')
-  .controller('LoginCtrl', ['$scope' ,function ($scope) {
+  .controller('LoginCtrl', ['$scope', '$auth'  ,function ($scope, $auth) {
+
+
     $scope.login = function(){
-      console.log('login');
+      var credentials = {
+        'username' : $scope.username,
+        'password' : $scope.password
+      };
+      console.log(credentials);
+      $auth.login(credentials).then(function(data){
+        console.log(data);
+      });
     };
   }]);

@@ -22,7 +22,7 @@ angular
   .config(function ($routeProvider, $authProvider) {
 
     $authProvider.baseUrl = 'http://localhost:8000';
-    $authProvider.loginUrl = '/api-token-auth';
+    $authProvider.loginUrl = '/api-token-auth/';
     $authProvider.sgnupUrl = '/signup';
 
     $routeProvider
