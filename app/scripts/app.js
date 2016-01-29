@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'resources.all',
-    'satellizer'
+    'satellizer',
+    'directives.all',
   ])
   .config(function ($routeProvider, $authProvider) {
 

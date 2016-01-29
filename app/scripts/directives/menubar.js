@@ -11,9 +11,19 @@ angular.module('directives.all', [])
         return {
             restrict: 'E',
             replace: true,
+            controller : function($scope, $auth, $location){
+              $scope.logout = function(){
+                $auth.logout();
+                $location.path('/login');
+              };
+
+              $scope.yesList = function(){
+                $location.path('/articles');
+              };
+            },
             link: function() {
 
             },
-            templateUrl: "common/menu.tpl.html"
-        };
-    })
+            templateUrl: 'views/menu.html'
+};
+});

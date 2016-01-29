@@ -17,8 +17,8 @@ angular.module('spartaFrontendApp')
         'password' : $scope.password
       };
       console.log(credentials);
-      $auth.login(credentials).then(function(data){
-        $location.path('/articls');
+      $auth.login(credentials).then(function(){
+        $location.path('/articles');
       });
     };
   }]);
