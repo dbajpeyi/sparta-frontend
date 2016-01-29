@@ -12,5 +12,10 @@ angular.module('resources.all', ['ngResource'])
   .factory('Articles', ['$resource', function ($resource) {
     return $resource(URL_BASE + '/articles', {}, {
       get: {method : 'GET', isArray : true}
-    });   
+    });
+  }])
+  .factory('Register', ['$resource', function ($resource) {
+    return $resource(URL_BASE + '/user/signup', {}, {
+      save: {method : 'POST'}
+    });
   }]);
