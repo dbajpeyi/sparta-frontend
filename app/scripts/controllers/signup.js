@@ -8,7 +8,7 @@
  * Controller of the spartaFrontendApp
  */
 angular.module('spartaFrontendApp')
-  .controller('SignupCtrl', ['Register', '$scope', function (Register, $scope) {
+  .controller('SignupCtrl', ['Register', '$scope', '$location', function (Register, $scope, $location) {
 
 
     $scope.signup = function(){
@@ -26,6 +26,7 @@ angular.module('spartaFrontendApp')
       };
       Register.save(registerData, function(data){
         console.log(data);
+        $location.path('/login');
       }, function(error){
         console.log(error);
         $scope.errors = error.data;
