@@ -8,7 +8,7 @@
  * Controller of the spartaFrontendApp
  */
 angular.module('spartaFrontendApp')
-  .controller('LoginCtrl', ['$scope', '$auth'  ,function ($scope, $auth) {
+  .controller('LoginCtrl', ['$scope', '$auth', '$location' ,function ($scope, $auth, $location) {
 
 
     $scope.login = function(){
@@ -18,7 +18,7 @@ angular.module('spartaFrontendApp')
       };
       console.log(credentials);
       $auth.login(credentials).then(function(data){
-        console.log(data);
+        $location.path('/articls');
       });
     };
   }]);

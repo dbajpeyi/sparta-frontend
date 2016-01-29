@@ -24,6 +24,8 @@ angular
     $authProvider.baseUrl = 'http://localhost:8000';
     $authProvider.loginUrl = '/api-token-auth/';
     $authProvider.sgnupUrl = '/signup';
+    $authProvider.authToken = 'JWT';
+
 
     $routeProvider
       .when('/articles', {
