@@ -18,4 +18,9 @@ angular.module('resources.all', ['ngResource'])
     return $resource(URL_BASE + '/user/signup', {}, {
       save: {method : 'POST'}
     });
+  }])
+  .factory('ArticleAction', ['$resource', function ($resource) {
+    return $resource(URL_BASE + '/article/action', {}, {
+      save: {method : 'POST'}
+    });
   }]);
