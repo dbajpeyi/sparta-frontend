@@ -6,6 +6,10 @@ Article news frontend consuming apis from [sparta-server](https://github.com/dba
 
 Run `grunt` for building and `grunt serve` for preview.
 
-## Testing
+##Goal
+Get hands dirty with session-less token based Auth using JWT
 
-Running `grunt test` will run the unit tests with karma.
+##How does it work
+
+User signs up and server sets a jwt toke, using a serverside secret. You enter your username and password and get back a JWT in response.
+I am using [satellizer](https://github.com/sahat/satellizer) to set the token in the head of XHR requests, and has other very handy auth functions 
