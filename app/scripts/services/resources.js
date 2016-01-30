@@ -25,7 +25,7 @@ angular.module('resources.all', ['ngResource'])
     });
   }])
   .factory('YesListCount', ['$resource', function ($resource) {
-    return $resource(URL_BASE + '/articles/liked/count', {}, {
+    return $resource(URL_BASE + '/user/info', {}, {
       get: {method : 'GET'}
     });
   }]);

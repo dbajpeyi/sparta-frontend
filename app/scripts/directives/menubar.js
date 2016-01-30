@@ -16,6 +16,8 @@ angular.module('directives.all', [])
               $scope.getYesList = function() {
                 YesListCount.get({}, function(data){
                   $scope.yesListCount = data.count;
+                  $scope.profileImage = data.gravatar;
+                  console.log(data);
                 });
               };
 
