@@ -4,6 +4,13 @@ Article news frontend consuming apis from [sparta-server](https://github.com/dba
 
 ## Build & development
 
+Make [npm](https://docs.npmjs.com/cli/install) and [bower](http://bower.io/) are installed
+
+
+Clone this project
+`cd sparta-frontend`
+`npm install && bower install`
+
 Run `grunt` for building and `grunt serve` for preview.
 
 ##Goal
