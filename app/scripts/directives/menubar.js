@@ -11,16 +11,17 @@ angular.module('directives.all', [])
         return {
             restrict: 'E',
             replace: true,
+            scope : {
+             
+            },
             controller : function($scope, $auth, $location, YesListCount){
-
               $scope.getYesList = function() {
                 YesListCount.get({}, function(data){
                   $scope.yesListCount = data.count;
-                  $scope.profileImage = data.gravatar;
-                  console.log(data);
+                  $scope.profileImage = data.gravatar; //calling this multiple times, need to change that
                 });
               };
-
+              $scope.getYesList();
               $scope.logout = function(){
                 $auth.logout();
                 $location.path('/login');
@@ -33,6 +34,7 @@ angular.module('directives.all', [])
             link: function() {
 
             },
+            controllerAs : 'ctrl',
             templateUrl: 'views/menu.html'
 };
 });
