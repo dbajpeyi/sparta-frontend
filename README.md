@@ -4,7 +4,7 @@ Sports article news frontend consuming apis from [sparta-server](https://github.
 
 ## Build & development
 
-Make [npm](https://docs.npmjs.com/cli/install) and [bower](http://bower.io/) are installed
+Make sure [npm](https://docs.npmjs.com/cli/install) and [bower](http://bower.io/) are installed
 
 
 Clone this project
