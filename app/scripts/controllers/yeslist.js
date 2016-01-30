@@ -22,8 +22,8 @@ angular.module('spartaFrontendApp')
   	$scope.articleDetails = function(article){
   		ReadArticle.put({
   			'ext_id' : article.ext_id,
-  		}, function(data){
-  			$location.path('/details/' + article.ext_id);
+  		}, function(){
+  			$location.path('/article/' + article.ext_id);
   		});
   	};
   });

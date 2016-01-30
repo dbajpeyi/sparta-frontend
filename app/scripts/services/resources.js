@@ -38,4 +38,9 @@ angular.module('resources.all', ['ngResource'])
     return $resource(URL_BASE + '/article/read/:ext_id', { ext_id : '@ext_id'}, {
       put: {method : 'PUT'}
     });
+  }])
+   .factory('ArticleDetail', ['$resource', function ($resource) {
+    return $resource(URL_BASE + '/article/:ext_id', { ext_id : '@ext_id'}, {
+      get: {method : 'GET'}
+    });
   }]);

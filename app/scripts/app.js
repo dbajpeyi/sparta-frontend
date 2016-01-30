@@ -49,6 +49,11 @@ angular
         controller: 'YeslistCtrl',
         controllerAs: 'yeslist'
       })
+      .when('/article/:ext_id', {
+        templateUrl: 'views/detail.html',
+        controller: 'DetailCtrl',
+        controllerAs: 'detail'
+      })
       .otherwise({
         redirectTo: '/articles'
       });
