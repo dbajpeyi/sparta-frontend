@@ -10,7 +10,10 @@
 angular.module('spartaFrontendApp')
   .controller('LoginCtrl', ['$scope', '$auth', '$location' ,function ($scope, $auth, $location) {
 
-
+    if ($auth.isAuthenticated()) {
+      $location.path('/articles');
+    }
+    
     $scope.login = function(){
       var credentials = {
         'username' : $scope.username,
