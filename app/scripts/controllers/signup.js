@@ -11,6 +11,10 @@ angular.module('spartaFrontendApp')
   .controller('SignupCtrl', ['Register', '$scope', '$location', function (Register, $scope, $location) {
 
 
+    $scope.login = function () {
+      $location.path('/login');
+    };
+
     $scope.signup = function(){
 
       var registerData = {

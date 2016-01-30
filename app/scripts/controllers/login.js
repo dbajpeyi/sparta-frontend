@@ -13,7 +13,11 @@ angular.module('spartaFrontendApp')
     if ($auth.isAuthenticated()) {
       $location.path('/articles');
     }
-    
+
+    $scope.signup = function  () {
+       $location.path('/signup');
+    };
+
     $scope.login = function(){
       var credentials = {
         'username' : $scope.username,
