@@ -28,7 +28,7 @@ angular.module('directives.all', [])
               };
 
               $scope.yesList = function(){
-                $location.path('/articles');
+                $location.path('/yeslist');
               };
             },
             link: function() {

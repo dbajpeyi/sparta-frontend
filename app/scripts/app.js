@@ -44,6 +44,11 @@ angular
         controller: 'LoginCtrl',
         controllerAs: 'login'
       })
+      .when('/yeslist', {
+        templateUrl: 'views/yeslist.html',
+        controller: 'YeslistCtrl',
+        controllerAs: 'yeslist'
+      })
       .otherwise({
         redirectTo: '/articles'
       });

@@ -28,4 +28,14 @@ angular.module('resources.all', ['ngResource'])
     return $resource(URL_BASE + '/user/info', {}, {
       get: {method : 'GET'}
     });
+  }])
+  .factory('YesList', ['$resource', function ($resource) {
+    return $resource(URL_BASE + '/articles/liked', {}, {
+      get: {method : 'GET', isArray:true}
+    });
+  }])
+  .factory('ReadArticle', ['$resource', function ($resource) {
+    return $resource(URL_BASE + '/article/read/:ext_id', { ext_id : '@ext_id'}, {
+      put: {method : 'PUT'}
+    });
   }]);
