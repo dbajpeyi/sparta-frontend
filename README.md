@@ -8,8 +8,10 @@ Make [npm](https://docs.npmjs.com/cli/install) and [bower](http://bower.io/) are
 
 
 Clone this project
-`cd sparta-frontend`
-`npm install && bower install`
+
+`cd sparta-frontend`    
+
+`npm install && bower install`    
 
 Run `grunt` for building and `grunt serve` for preview.
 
