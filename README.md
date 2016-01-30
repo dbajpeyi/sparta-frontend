@@ -1,6 +1,6 @@
 # sparta-frontend
 
-Article news frontend consuming apis from [sparta-server](https://github.com/dbajpeyi/sparta-server)
+Sports article news frontend consuming apis from [sparta-server](https://github.com/dbajpeyi/sparta-server)
 
 ## Build & development
 
