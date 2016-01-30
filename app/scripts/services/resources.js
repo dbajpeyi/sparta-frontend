@@ -23,4 +23,9 @@ angular.module('resources.all', ['ngResource'])
     return $resource(URL_BASE + '/article/action', {}, {
       save: {method : 'POST'}
     });
+  }])
+  .factory('YesListCount', ['$resource', function ($resource) {
+    return $resource(URL_BASE + '/articles/liked/count', {}, {
+      get: {method : 'GET'}
+    });
   }]);

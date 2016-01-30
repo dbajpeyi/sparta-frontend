@@ -1,18 +1,24 @@
 <div class="row" ng-if="isAuthenticated">
-    <div class="panel panel-primary col-md-offset-1 col-md-4" ng-repeat="article in articles" ng-if="article.img_url">
+    <div class="panel panel-primary" ng-repeat="article in articles" ng-if="article.img_url">
       <div class="panel-heading">
-        <h3 class="panel-title">{{article.title}}</h3>
+        <h1 class="panel-title">{{article.title}}</h1>
       </div>
       <div class="panel-body text-center">
-        <img src="{{article.img_url}}" class="img-responsive">
-          <hr>
+        <img src="{{article.img_url}}" class="img-responsive center-block thumbnail">
+          <br>
         <p class="text-left">{{article.summary}}</p>
+        <div class="text-left"> <small class="text-muted">{{article.posted_on | date : 'dd MMMM yyyy'}}</small></div>
       </div>
       <div class="panel-footer text-center">
-          <button class="btn btn-success"><i class="fa fa-thumbs-o-up fa-2x" ng-click="articleAction(article, true)"></i></button>
-          <button class="btn btn-danger"><i class="fa fa-thumbs-o-down fa-2x"></i></button>
+          <button class="btn btn-success" ng-click="articleAction(article, true)"><i class="fa fa-thumbs-o-up fa-2x"></i></button>
+          <button class="btn btn-danger" ng-click="articleAction(article, false)"><i class="fa fa-thumbs-o-down fa-2x"></i></button>
       </div>
     </div>
+</div>
+<div ng-if="articles.length==0" class="text-center">
+    <br><br><div style="margin-top:5em;"></div>
+  <button class="btn btn-danger" ng-click="loadMore()" ng-if="!noMoreToShow">Load more</button>
+  <h2 class="text-center text-muted" ng-click="loadMore()" ng-if="noMoreToShow">No more articles to show, come back later..</h2>
 </div>
 <div class="row" ng-if="!isAuthenticated">
   <br><br><div style="margin-top:5em;"></div>

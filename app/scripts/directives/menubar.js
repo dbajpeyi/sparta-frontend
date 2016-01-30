@@ -11,7 +11,14 @@ angular.module('directives.all', [])
         return {
             restrict: 'E',
             replace: true,
-            controller : function($scope, $auth, $location){
+            controller : function($scope, $auth, $location, YesListCount){
+
+              $scope.getYesList = function() {
+                YesListCount.get({}, function(data){
+                  $scope.yesListCount = data.count;
+                });
+              };
+
               $scope.logout = function(){
                 $auth.logout();
                 $location.path('/login');
