@@ -10,6 +10,7 @@
 angular.module('spartaFrontendApp')
   .controller('ArticlesCtrl', function ($scope, $filter, Articles, ArticleAction, $auth, $location) {
 
+  	$scope.noMoreToShow = false;
   	$scope.isAuthenticated = function () {
   		 return $auth.isAuthenticated();  
   	};
@@ -18,6 +19,20 @@ angular.module('spartaFrontendApp')
   		$location.path('/login');
   	};
 
+  	var getArticles = function() {
+  		Articles.get({}, function(data){
+  		$scope.articles = data;
+  		if($scope.articles.length === 0){
+  			$scope.noMoreToShow = true;
+  		}
+  	  });
+  	};
+
+  	getArticles();
+
+  	$scope.loadMore = function () {
+  		 getArticles(); 
+  	};
 
   	$scope.articleAction = function(article, is_liked) {
   		console.log(is_liked, article.ext_id);
@@ -25,15 +40,9 @@ angular.module('spartaFrontendApp')
   		 	'is_liked' : is_liked,
   		 	'ext_id' : article.ext_id
   		 }, function(data){
-  		 	angular.forEach($scope.articles, function(item){
-  		 		$scope.articles = $filter('filter')($scope.articles, {'ext_id' : '!' + data.article.ext_id})
-  		 	});
+  		 	$scope.articles = $filter('filter')($scope.articles, {'ext_id' : '!' + data.article.ext_id});
   		 });
   	};
 
-  	Articles.get({}, function(data){
-  		$scope.articles = data;
-  		console.log(data);
-  	});
 
   });
