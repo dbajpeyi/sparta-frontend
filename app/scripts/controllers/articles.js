@@ -10,6 +10,11 @@
 angular.module('spartaFrontendApp')
   .controller('ArticlesCtrl', function ($scope, $filter, Articles, ArticleAction, $auth, $location) {
 
+
+    if (!$auth.isAuthenticated()) {
+      $location.path('/login');
+    }
+
   	$scope.noMoreToShow = false;
   	$scope.isAuthenticated = function () {
   		 return $auth.isAuthenticated();  

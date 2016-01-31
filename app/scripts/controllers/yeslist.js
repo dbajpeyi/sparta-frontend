@@ -8,8 +8,11 @@
  * Controller of the spartaFrontendApp
  */
 angular.module('spartaFrontendApp')
-  .controller('YeslistCtrl', function ($scope, $location, YesList, ReadArticle) {
-
+  .controller('YeslistCtrl', function ($scope, $location, $auth, YesList, ReadArticle) {
+    
+    if (!$auth.isAuthenticated()) {
+      $location.path('/login');
+    }
 
   	var getArticles = function() {
   		YesList.get({}, function(data){

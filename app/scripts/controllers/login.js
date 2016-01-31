@@ -26,6 +26,11 @@ angular.module('spartaFrontendApp')
       console.log(credentials);
       $auth.login(credentials).then(function(){
         $location.path('/articles');
+      }, function(error){
+        if (!error.data.non_field_errors){
+          console.log(error.data);
+        }
+        $scope.error = error.data.non_field_errors[0];
       });
     };
   }]);
