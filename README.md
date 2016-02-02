@@ -4,16 +4,20 @@ Sports article news frontend consuming apis from [sparta-server](https://github.
 
 ## Build & development
 
-Make sure [npm](https://docs.npmjs.com/cli/install) and [bower](http://bower.io/) are installed
+- Make sure [npm](https://docs.npmjs.com/cli/install)
 
+- `sudo npm install -g grunt-cli bower`
 
-Clone this project
+- Clone this project
 
-`cd sparta-frontend`    
+- `cd sparta-frontend`    
 
-`npm install && bower install`    
+- npm install  && bower install
 
-Run `grunt` for building and `grunt serve` for preview.
+- Run `grunt` to build 
+
+- Run `grunt serve` ; this will start a local server at 9000, go to http://localhost:9000/login and try it out!
+
 
 ##Goal
 Get hands dirty with session-less token based Auth using JWT
