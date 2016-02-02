@@ -4,7 +4,7 @@ Sports article news frontend consuming apis from [sparta-server](https://github.
 
 ## Build & development
 
-- Make sure [npm](https://docs.npmjs.com/cli/install)
+- Make sure [nodejs](https://nodejs.org/en/download/) is installed
 
 - `sudo npm install -g grunt-cli bower`
 
