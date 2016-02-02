@@ -6,6 +6,8 @@ Sports article news frontend consuming apis from [sparta-server](https://github.
 
 - Make sure [nodejs](https://nodejs.org/en/download/) is installed
 
+- sudo gem install compass
+
 - `sudo npm install -g grunt-cli bower`
 
 - Clone this project
@@ -17,6 +19,7 @@ Sports article news frontend consuming apis from [sparta-server](https://github.
 - Run `grunt` to build 
 
 - Run `grunt serve` ; this will start a local server at 9000, go to http://localhost:9000/login and try it out!
+
 
 
 ##Goal
