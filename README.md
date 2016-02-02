@@ -14,7 +14,7 @@ Sports article news frontend consuming apis from [sparta-server](https://github.
 
 - `cd sparta-frontend`    
 
-- npm install  && bower install
+- `npm install  && bower install`
 
 - Run `grunt` to build 
 
